@@ -2,7 +2,7 @@ steps:
 
 - id: go_test
   name: "gcr.io/cloud-builders/go"
-  args: ["test","/home/user/go/src/**/"]
+  args: ["test","src/**/"]
   env: ["GOPATH=."]
 
 - id: gopath
