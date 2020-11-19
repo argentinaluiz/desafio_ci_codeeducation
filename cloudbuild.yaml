@@ -1,5 +1,11 @@
 steps:
 
-- id: go_test
+- id: "Rodando install"
   name: "gcr.io/cloud-builders/go"
-  args: ["test","./src/operacoes"]
+  args: ["install", "soma"]
+  env: ["GOPATH=."]
+
+- id: "Rodando Test"
+  name: "gcr.io/cloud-builders/go"
+  args: ["test", "soma"]
+  env: ["GOPATH=."]
