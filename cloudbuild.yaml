@@ -2,4 +2,6 @@ steps:
 - id: go_test
   name: "gcr.io/cloud-builders/go"
   args: ["run","main.go"]
-  env: ['PROJECT_ROOT=github.com/robsantossilva/desafio_ci_codeeducation/src']
+  env: [
+    'PROJECT_ROOT=github.com/robsantossilva/desafio_ci_codeeducation/src',
+    'GOPATH=.']
