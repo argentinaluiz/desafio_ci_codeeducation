@@ -3,3 +3,4 @@ steps:
 - id: "Rodando testes"
   name: "golang"
   args: ['go','test','./**/']
+  env: ["GOPATH=."]
