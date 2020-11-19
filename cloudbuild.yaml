@@ -1,5 +1,4 @@
 steps:
-- id: go_test
+- id: go_run
   name: "gcr.io/cloud-builders/go"
-  args: ["run","main.go"]
-  env: ['GOPATH=/workspace/src/github.com/robsantossilva/desafio_ci_codeeducation/src']
+  args: ["run","src/main.go"]
