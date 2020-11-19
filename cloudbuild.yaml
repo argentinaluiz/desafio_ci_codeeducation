@@ -9,3 +9,15 @@ steps:
   name: "gcr.io/cloud-builders/go"
   args: ["test", "soma"]
   env: ["GOPATH=."]
+
+- id: "Rodando Build"
+  name: "gcr.io/cloud-builders/docker"
+  args: ["build", "--tag=gcr.io/$PROJECT_ID/go-sum:$SHORT_SHA", "."]
+
+- id: "Rodando Push"
+  name: "gcr.io/cloud-builders/docker"
+  args: ["push", "gcr.io/$PROJECT_ID/desafio-ci-soma:$SHORT_SHA"]
+
+- id: "Run App"
+  name: "gcr.io/cloud-builders/docker"
+  args: ["run", "gcr.io/$PROJECT_ID/desafio-ci-soma:$SHORT_SHA"]
