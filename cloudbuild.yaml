@@ -4,5 +4,5 @@ substitutions:
 steps:
 - id: go_test
   name: "gcr.io/cloud-builders/go"
-  args: ["test","go/src/${_APP}/src/**/"]
+  args: ["run","main.go"]
   env: ["GOPATH=go"]
