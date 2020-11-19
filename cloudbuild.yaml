@@ -16,6 +16,7 @@ steps:
 
 images:
 - 'gcr.io/$PROJECT_ID/desafio-ci-sum:latest'
+- 'gcr.io/$PROJECT_ID/desafio-ci-sum:$SHORT_SHA'
 tags: ['cloud-builders-community']
 
 # - id: "Rodando Push"
