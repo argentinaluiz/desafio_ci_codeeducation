@@ -12,7 +12,7 @@ steps:
 
 - id: "Rodando Build"
   name: "gcr.io/cloud-builders/docker"
-  args: ["build", "--tag=gcr.io/$PROJECT_ID/go-sum:$SHORT_SHA", "."]
+  args: ["build", "--tag=gcr.io/$PROJECT_ID/desafio-ci-sum:$SHORT_SHA", "."]
 
 - id: "Rodando Push"
   name: "gcr.io/cloud-builders/docker"
