@@ -2,4 +2,4 @@ steps:
 
 - id: go_test
   name: "gcr.io/cloud-builders/go"
-  args: ["test","./src/operacoes/"]
+  args: ["test","./src/operacoes"]
