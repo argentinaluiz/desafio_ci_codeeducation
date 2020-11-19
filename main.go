@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/robsantossilva/desafio_ci_codeeducation/operacoes"
+	"github.com/robsantossilva/desafio_ci_codeeducation/src"
 )
 
 func main() {

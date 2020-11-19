@@ -3,7 +3,7 @@ package operacoes_test
 import (
 	"testing"
 
-	"github.com/robsantossilva/desafio_ci_codeeducation/operacoes"
+	"github.com/robsantossilva/desafio_ci_codeeducation/src"
 )
 
 func TestSomar(t *testing.T) {
