@@ -1,5 +1,5 @@
 substitutions:
-  _APP: https://github.com/robsantossilva/desafio_ci_codeeducation
+  _APP: github.com/robsantossilva/desafio_ci_codeeducation
 
 steps:
 - id: go_test
