@@ -1,5 +1,35 @@
 steps:
 
-- id: "Rodando testes"
-  name: "go"
-  args: ['test','./**/']
+- id: "Rodando install"
+  name: "gcr.io/cloud-builders/go"
+  args: ["install", "soma"]
+  env: ["GOPATH=."]
+
+- id: "Rodando Test"
+  name: "gcr.io/cloud-builders/go"
+  args: ["test", "soma"]
+  env: ["GOPATH=."]
+
+- id: "Rodando Build"
+  name: "gcr.io/cloud-builders/docker"
+  args:
+  - 'build'
+  - '-t'
+  - 'gcr.io/$PROJECT_ID/desafio-ci-sum:latest'
+  - '-t'
+  - 'gcr.io/$PROJECT_ID/desafio-ci-sum:$SHORT_SHA'
+  - '.'
+  #args: ["build", "--tag=gcr.io/$PROJECT_ID/desafio-ci-sum:latest", "."]
+
+images:
+- 'gcr.io/$PROJECT_ID/desafio-ci-sum:latest'
+- 'gcr.io/$PROJECT_ID/desafio-ci-sum:$SHORT_SHA'
+tags: ['cloud-builders-community']
+
+# - id: "Rodando Push"
+#   name: "gcr.io/cloud-builders/docker"
+#   args: ["push", "gcr.io/$PROJECT_ID/desafio-ci-soma:$SHORT_SHA"]
+
+# - id: "Run App"
+#   name: "gcr.io/cloud-builders/docker"
+#   args: ["run", "gcr.io/$PROJECT_ID/desafio-ci-soma:$SHORT_SHA"]
