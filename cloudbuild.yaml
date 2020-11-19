@@ -1,5 +1,5 @@
 steps:
 
 - id: go_run
-  name: "gcr.io/cloud-builders/go"
+  name: "gcr.io/cloud-builders/go:14.4"
   args: ["run","main.go"]
